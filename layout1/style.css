@@ -1,0 +1,56 @@
+body * {
+  border: 1px solid black;
+  margin: 10px;
+  text-align: center;
+  font-size: calc(15px + 0.390625vw);
+}
+
+nav {
+  height: 50px;
+}
+
+main {
+  height: 40vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  height: 50px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  /* Adjustments for mobile devices */
+  body * {
+    font-size: 16px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Adjustments for tablets */
+  body * {
+    font-size: 18px;
+  }
+
+  main {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  /* Adjustments for desktops */
+  body * {
+    font-size: 20px;
+  }
+
+  main {
+    flex-direction: row;
+  }
+}

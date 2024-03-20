@@ -1,0 +1,127 @@
+body * {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: transparent; /* Remove background color */
+  border: 1px solid #000;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+}
+
+header,
+nav {
+  border: 1px solid #000;
+}
+
+nav {
+  padding: 10px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-a {
+  padding: 20px;
+  height: 500px;
+  justify-content: center;
+  align-content: center;
+}
+
+.content-b {
+  float: left;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  padding: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.picture,
+.about {
+  padding: 10px;
+  text-align: center;
+  flex-basis: 100px;
+  flex-grow: 1;
+  height: 200px;
+}
+
+.recent {
+  text-align: center;
+  height: 200px;
+  width: 100%;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  padding: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .content-a {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-b {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .picture,
+  .about .recent {
+    flex-basis: 100px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header,
+  nav,
+  .content-a,
+  .content-b,
+  .picture,
+  .about,
+  .recent,
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .picture,
+  .about,
+  .recent {
+    text-align: center;
+    height: 200px;
+    width: 100%;
+  }
+
+  .content-b {
+    display: flex;
+    padding: 10px;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  .recent {
+    padding: 10px;
+    text-align: center;
+    flex-basis: 100px;
+    flex-grow: 1;
+    height: 200px;
+  }
+}
